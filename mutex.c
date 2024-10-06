@@ -53,12 +53,12 @@ unsigned long mutexExecution(int total_operations,int member_frac,int insert_fra
         pthread_join(thread_handles[thread],NULL);
     }
 
-
-    Destroy(head);
-    pthread_mutex_destroy(&mutex); 
     free(thread_handles);
 
     gettimeofday(&end, NULL);
+
+    pthread_mutex_destroy(&mutex);
+    Destroy(head);
 
     unsigned long elapsed_time = time_diff(&start, &end);
     return elapsed_time;
