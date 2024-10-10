@@ -9,21 +9,8 @@
 #include "linked_list.h"
 #include "global.h"
 
-void *threadFuncReadWrite(void* rank);
+void *Thread_Operation(void *thread_id);
 
-struct rw_lock_data {
-    pthread_rwlock_t rwlock;
-    list_node_s *head;
-    int *thread_id;
-
-    int thread_count;
-
-    int member_frac;
-    int insert_frac;
-    int delete_frac;
-};
-typedef struct rw_lock_data rw_lock_data;
-
-unsigned long readWriteExecution(int total_operations, int member_frac, int insert_frac, int delete_frac, int thread_count);
+unsigned long readWriteExecution(int total_operations, int member_ops, int insert_ops, int delete_ops, int threads);
 
 #endif //LAB1_RWLOCK_H

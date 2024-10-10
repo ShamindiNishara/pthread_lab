@@ -9,7 +9,6 @@
 #include "linked_list.h"
 #include "global.h"
 
-
-unsigned long mutexExecution(int total_operations,int member_frac,int insert_frac,int delete_frac,int thread_count);
-void *thread_function(void *rank);
+unsigned long mutexExecution(int total_operations,int member_ops,int insert_ops,int delete_ops,int threads);
+void *thread_function(void* thread_id);
 #endif //LAB1_MUTEX_H

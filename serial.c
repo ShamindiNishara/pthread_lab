@@ -15,8 +15,10 @@ unsigned long serialExecution(int total_operations, int mem_frac, int insert_fra
     int n = 1000;
     list_node_s *head = NULL;
     //inserting n random numbers
-    for (int nodes = 0; nodes < n; nodes++) {
-    Insert(rand() % MAX, &head);
+    int i = 0;
+    while (i < n) {
+        if (Insert(rand() % 65535, &head) == 1)
+            i++;
     }
     struct timeval start;
     struct timeval end;
@@ -42,16 +44,13 @@ unsigned long serialExecution(int total_operations, int mem_frac, int insert_fra
             total_operations_count++;
         }
     }
- 
+    gettimeofday(&end, NULL);
     Destroy(head);
   
-    gettimeofday(&end, NULL);
-
     unsigned long elapsed_time = time_diff(&start, &end);
 
     // Return the elapsed time
     return elapsed_time;
-    printf("Serial Execution Done\n");
 
 
 }
