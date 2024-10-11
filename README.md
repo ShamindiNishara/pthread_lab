@@ -2,6 +2,7 @@
 This project demonstrates how to implement parallel programming using the Pthread library in C. The program compares the performance of serial and parallel implementations.
 
 1.Download the project files or clone the repository to your local machine.
+    `git clone https://github.com/ShamindiNishara/pthread_lab.git`
     
 2.Use the following command to compile all .c files and link them with the pthread library
     `gcc *.c -o main_program -lpthread`

@@ -16,11 +16,13 @@ int insert_frac;
 int delete_frac;
 srand(time(0));
 FILE *file;
+char filename[50];
 
 for (int i = 0; i < 3; i++) {
         switch (i) {
             case 0:
-                file = fopen("C:\\Users\\Shamindi Nishara\\Documents\\pthread_lab\\Case_1.csv","w+");
+                sprintf(filename, "Case_1_%d.csv", N);
+                file = fopen(filename, "w+");
                 fprintf(file,"Serial, Mutex_t1, Mutex_t2, Mutex_t4, Mutex_t8, ReadWrite_t1, ReadWrite_t2, ReadWrite_t4, ReadWrite_t8\n");
                 member_frac = lround(m * 0.99);
                 insert_frac = lround(m * 0.005);
@@ -28,7 +30,8 @@ for (int i = 0; i < 3; i++) {
                 break;
 
             case 1:
-                file = fopen("C:\\Users\\Shamindi Nishara\\Documents\\pthread_lab\\Case_2.csv","w+");
+                sprintf(filename, "Case_2_%d.csv", N);
+                file = fopen(filename, "w+");
                 fprintf(file,"Serial, Mutex_t1, Mutex_t2, Mutex_t4, Mutex_t8, ReadWrite_t1, ReadWrite_t2, ReadWrite_t4, ReadWrite_t8\n");
                 member_frac = lround(m * 0.9);
                 insert_frac = lround(m * 0.05);
@@ -36,7 +39,8 @@ for (int i = 0; i < 3; i++) {
                 break;
 
             case 2:
-                file = fopen("C:\\Users\\Shamindi Nishara\\Documents\\pthread_lab\\Case_3.csv","w+");
+                sprintf(filename, "Case_3_%d.csv", N);
+                file = fopen(filename, "w+"); 
                 fprintf(file,"Serial, Mutex_t1, Mutex_t2, Mutex_t4, Mutex_t8, ReadWrite_t1, ReadWrite_t2, ReadWrite_t4, ReadWrite_t8\n");
                 member_frac = lround(m * 0.5);
                 insert_frac = lround(m * 0.25);
