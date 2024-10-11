@@ -28,7 +28,7 @@ unsigned long mutexExecution(int total_operations,int member_ops,int insert_ops,
         Insert(rand() % 65535, &thread_data.head);
         nodes++;
     }
-    //creating threads
+
     pthread_t *thread_handles=malloc(thread_count*sizeof(pthread_t));
     //initializing mutex
     pthread_mutex_init(&thread_data.mutex,NULL);

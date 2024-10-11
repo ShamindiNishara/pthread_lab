@@ -9,8 +9,8 @@
 
 int main(){
 unsigned long serial_runtime, mut_t1_runtime, mut_t2_runtime, mut_t4_runtime, mut_t8_runtime, rw_t1_runtime,  rw_t2_runtime, rw_t4_runtime, rw_t8_runtime;
-int N=385;
-int m=10000;
+int N=385; //number of iterations
+int m=10000; //number of operations
 int member_frac;
 int insert_frac;
 int delete_frac;

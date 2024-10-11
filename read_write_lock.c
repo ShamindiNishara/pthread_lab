@@ -15,7 +15,7 @@ unsigned long readWriteExecution(int total_operations, int member_ops, int inser
     thread_data.insert_operations=insert_ops;
     thread_data.delete_operations=delete_ops;
 
-    // operationss of each operation
+    //inserting n random numbers
     int n=1000;
     int nodes=0;
     while (nodes < n){
